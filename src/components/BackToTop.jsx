@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import styles from "./index.module.css";
-import BsFillArrowUpCircleFill from "react-icons/bs";
+import {BsFillArrowUpCircleFill} from "react-icons/bs";
 class ScrollTop extends Component {
   state = {
     scrolled: 0,
