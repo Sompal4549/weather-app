@@ -1,18 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import * as ReactDOM from "react-dom/client";
+import { createStandaloneToast } from "@chakra-ui/toast";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+const { ToastContainer, toast } = createStandaloneToast();
 
-import "bootstrap/dist/css/bootstrap.min.css";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
+// render the ToastContainer in your React root
+const rootElement = document.getElementById("root");
+ReactDOM.createRoot(rootElement).render(
+  <>
     <App />
-  </React.StrictMode>
+    <ToastContainer />
+  </>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+toast({ title: "Chakra UI" });
